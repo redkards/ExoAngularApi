@@ -1,0 +1,27 @@
+<h2>page de creation d'auteur</h2>
+
+<form [formGroup]="creationAuteur" (ngSubmit)="onSubmit()">
+
+  <div class=" create mt-4">
+    <label for="FirstName">prenom :</label>
+    <input type="text" id="FirstName" formControlName="FirstName">
+    @if (submitted && form['FirstName'].invalid) {
+    <span>prenom invalid</span>
+    }@else if (form['FirstName'].hasError('minlength')) {
+    <span>le prenom doit contenir au moins 3 caractères</span>
+    }
+
+    <label for="LastName">nom :</label>
+    <input type="text" id="LastName" formControlName="LastName">
+    @if (submitted && form['LastName'].invalid) {
+    <span>nom invalid</span>
+    }@else if (form['LastName'].hasError('minlength')) {
+    <span>le nom doit contenir au moins 3 caractères</span>
+    }
+
+
+    <button type="submit" (click)="onSubmit()">creer</button>
+
+  </div>
+
+</form>

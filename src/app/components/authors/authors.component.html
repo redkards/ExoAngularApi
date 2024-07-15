@@ -1,0 +1,29 @@
+<h2>bienvenue sur la pages des auteurs</h2>
+<br>
+
+<button class="btnCreate" type="submit" routerLink="/creerAuteur">creer un auteur</button>
+<br>
+
+@for (item of listeAuteurs; track $index) {
+
+
+<div class="card">
+  <img src="HTTPS://picsum.photos/200?random={{$index}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.FirstName}} {{item.LastName}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{item.id}}</li>
+    <li class="list-group-item">{{item.FirstName}}</li>
+    <li class="list-group-item">"{{item.LastName}}"</li>
+  </ul>
+
+  <button type="submit">modifier</button>
+  <button type="submit">supprimer</button>
+</div>
+
+
+}

@@ -1,0 +1,12 @@
+.card {
+  float: left;
+  width: 18rem;
+  margin: 3px 3px 3px 3px;
+}
+
+.btnCreate {
+  background-color: blueviolet;
+  margin-bottom: 25px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
